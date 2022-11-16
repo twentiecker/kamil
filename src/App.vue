@@ -1,21 +1,22 @@
 <template>
-  <div>
-    <Home />
-  </div>
+  <v-app id="inspire">
+    <Header />
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
-import Home from './components/Home';
+import Header from './components/Header.vue';
 
 export default {
-  name: 'App',
-
   components: {
-    Home,
+    Header,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style>
+a {
+  text-decoration: none;
+}
+</style>
