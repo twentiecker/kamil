@@ -52,7 +52,7 @@
                       <v-carousel-item
                         v-for="(slide, i) in slidesTalk"
                         :key="i"
-                        :src="slide"
+                        :src="require(`../assets/${slide}`)"
                       >
                       </v-carousel-item>
                     </v-carousel>
@@ -80,7 +80,7 @@
                       <v-carousel-item
                         v-for="(slide, i) in slidesPaper"
                         :key="i"
-                        :src="slide"
+                        :src="require(`../assets/${slide}`)"
                       >
                       </v-carousel-item>
                     </v-carousel>
@@ -108,7 +108,7 @@
                       <v-carousel-item
                         v-for="(slide, i) in slidesInter"
                         :key="i"
-                        :src="slide"
+                        :src="require(`../assets/${slide}`)"
                       >
                       </v-carousel-item>
                     </v-carousel>
@@ -215,19 +215,16 @@ export default {
       { icon: 'bx bx-timer bx-sm bx-tada-hover', name: 'Prosiding SENDIPA' },
     ],
     slidesTalk: [
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/3a-Banner-Awal-Talkshow.png',
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/09/talkshow-banner-scaled.jpg',
+      'talk/3a-Banner-Awal-Talkshow.png',
+      'talk/talkshow-banner-scaled.jpg',
     ],
     slidesPaper: [
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/bannerpanjang1.png',
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/7a-Banner-Timeline-2-timelineCFP.png',
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/bannerpanjang3.png',
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/8-Banner-Rules.png',
+      'paper/bannerpanjang1.png',
+      'paper/7a-Banner-Timeline-2-timelineCFP.png',
+      'paper/bannerpanjang3.png',
+      'paper/8-Banner-Rules.png',
     ],
-    slidesInter: [
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/1-Banner-Webinar.png',
-      'https://kamilpasca.itb.ac.id/wp-content/uploads/2021/08/2-Banner-Speaker.png',
-    ],
+    slidesInter: ['inter/1-Banner-Webinar.png', 'inter/2-Banner-Speaker.png'],
     items: [
       {
         header: 'Editor in Chief',
