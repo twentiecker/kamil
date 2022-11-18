@@ -13,9 +13,9 @@
               </h1>
               <v-img
                 class="mt-10"
-                lazy-src="../../public/BPH-min.png"
+                lazy-src="../assets/BPH-min.png"
                 max-width="100%"
-                src="../../public/BPH-min.png"
+                src="../assets/BPH-min.png"
               ></v-img>
               <div class="pt-10" align="justify">
                 <h1>Visi</h1>
