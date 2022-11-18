@@ -19,7 +19,7 @@
       </div>
 
       <v-spacer></v-spacer>
-      <div v-for="social in socials" :key="social">
+      <div v-for="(social, i) in socials" :key="i">
         <a class="ml-3" :href="social.route">
           <i :class="social.icon"></i>
         </a>

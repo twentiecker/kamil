@@ -6,24 +6,24 @@
         <v-col align="center">
           <v-sheet min-height="70vh" rounded="lg">
             <!--  -->
-            <v-container class="col-11 mx-auto py-10">
+            <v-container class="col-10 mx-auto py-10">
               <div class="pt-2">
-                <subtitle-1
-                  >بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ
-                  الرَّحِيْمِ</subtitle-1
-                >
+                <div class="text-subtitle-1">
+                  بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
+                </div>
                 <h1>Selamat Datang</h1>
-                <subtitle-1
-                  >Portal Informasi – Keluarga Mahasiswa Islam (KAMIL)
-                  Pascasarjana ITB</subtitle-1
-                >
+                <div class="text-subtitle-1">
+                  Portal Informasi – Keluarga Mahasiswa Islam (KAMIL)
+                  Pascasarjana ITB
+                </div>
               </div>
               <div class="mt-10">
                 <LazyYoutube
-                  class="mb-3"
+                  class="mb-5"
                   v-for="video in videos"
                   :key="video"
                   :src="video"
+                  max-width="100%"
                 />
               </div>
               <div class="pt-10">

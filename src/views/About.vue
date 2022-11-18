@@ -6,10 +6,10 @@
         <v-col align="center">
           <v-sheet min-height="70vh" rounded="lg">
             <!--  -->
-            <v-container class="col-11 mx-auto py-10">
+            <v-container class="col-10 mx-auto py-10">
               <h1>
-                Badan Pengurus Harian (BPH) Aktif KAMIL Pascasarjana ITB
-                2020-2021
+                Badan Pengurus Harian (BPH) <br />
+                KAMIL Pascasarjana ITB 2020-2021
               </h1>
               <v-img
                 class="mt-10"

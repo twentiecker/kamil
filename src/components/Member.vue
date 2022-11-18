@@ -8,7 +8,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in members" :key="item.jabatan">
+        <tr v-for="(item, i) in members" :key="i">
           <td>{{ item.jabatan }}</td>
           <td>{{ item.nama }}</td>
         </tr>
