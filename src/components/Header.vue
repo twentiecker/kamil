@@ -53,8 +53,11 @@
 
         <v-spacer></v-spacer>
         <div v-for="(social, i) in socials" :key="i">
-          <a class="ml-3" :href="social.route" target="_blank">
-            <i :class="social.icon"></i>
+          <a class="hidden-sm-and-up ml-3" :href="social.route" target="_blank">
+            <i :class="social.iconXs"></i>
+          </a>
+          <a class="hidden-xs-only ml-3" :href="social.route" target="_blank">
+            <i :class="social.iconSm"></i>
           </a>
         </div>
       </v-container>
@@ -73,19 +76,23 @@ export default {
     ],
     socials: [
       {
-        icon: 'bx bxl-instagram-alt bx-sm bx-tada-hover',
+        iconSm: 'bx bxl-instagram-alt bx-sm bx-tada-hover',
+        iconXs: 'bx bxl-instagram-alt bx-xs bx-tada-hover',
         route: 'https://www.instagram.com/kamilpascaitb/',
       },
       {
-        icon: 'bx bxl-youtube bx-sm bx-tada-hover',
+        iconSm: 'bx bxl-youtube bx-sm bx-tada-hover',
+        iconXs: 'bx bxl-youtube bx-xs bx-tada-hover',
         route: 'https://www.youtube.com/channel/UCmaX2KczM1C9dRE0jsbs2xQ',
       },
       {
-        icon: 'bx bxl-facebook bx-sm bx-tada-hover',
+        iconSm: 'bx bxl-facebook bx-sm bx-tada-hover',
+        iconXs: 'bx bxl-facebook bx-xs bx-tada-hover',
         route: 'https://id-id.facebook.com/kamilpascasarjanaitb/',
       },
       {
-        icon: 'bx bxl-twitter bx-sm bx-tada-hover',
+        iconSm: 'bx bxl-twitter bx-sm bx-tada-hover',
+        iconXs: 'bx bxl-twitter bx-xs bx-tada-hover',
         route: 'https://twitter.com/kamilpascaitb',
       },
     ],

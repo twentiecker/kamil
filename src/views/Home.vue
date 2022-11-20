@@ -17,18 +17,16 @@
               </div>
             </div>
             <div class="mt-10">
-              <div
-                v-for="(video, i) in videos"
-                :key="i"
-                class="mb-3"
-                style="--aspect-ratio: 16/9"
-              >
-                <iframe
-                  width="956"
-                  height="538"
-                  :src="video"
-                  allowfullscreen
-                ></iframe>
+              <div v-for="id in videoId" :key="id">
+                <youtube
+                  class="hidden-md-and-up mb-3"
+                  :video-id="id"
+                  player-width="100%"
+                ></youtube>
+                <youtube
+                  class="hidden-sm-and-down mb-3"
+                  :video-id="id"
+                ></youtube>
               </div>
             </div>
             <div class="pt-10">
@@ -57,36 +55,18 @@
 <script>
 export default {
   data: () => ({
-    videos: [
+    videoId: [],
+  }),
+  mounted() {
+    const videos = [
       'https://www.youtube.com/embed/GClAnMUgV54',
       'https://www.youtube.com/embed/j73KKLliONA',
       'https://www.youtube.com/embed/GqsTgIDVCBs',
-    ],
-  }),
+    ];
+
+    videos.forEach((video) => {
+      this.videoId.push(this.$youtube.getIdFromURL(video));
+    });
+  },
 };
 </script>
-
-<style scoped>
-[style*='--aspect-ratio'] > :first-child {
-  width: 100%;
-}
-[style*='--aspect-ratio'] > img {
-  height: auto;
-}
-@supports (--custom: property) {
-  [style*='--aspect-ratio'] {
-    position: relative;
-  }
-  [style*='--aspect-ratio']::before {
-    content: '';
-    display: block;
-    padding-bottom: calc(100% / (var(--aspect-ratio)));
-  }
-  [style*='--aspect-ratio'] > :first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
-}
-</style>
